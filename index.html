@@ -12,38 +12,54 @@
     <link rel="stylesheet" href="./CSS/style.css" />
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
     </style>
 
 </head>
 
 <body>
     <h1 class="text-center display-1 m-2 title-container ">
-        <img src="./assets/logo/bmi.png" class="img-responsive bmi-logo ">
+
         <span style="font-family: 'Righteous', cursive;">
             BMI Calculator
         </span>
+        <img src="./assets/logo/bmi.png" class="img-responsive bmi-logo ">
     </h1>
+
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <form>
+
                     <label for="txt-weight" class="form-lable">Enter your Weight in KG</label>
                     <input type="text" placeholder="Weight in KG" class="form-control" id="txt-weight">
-
                     <label for="txt-height" class="form-lable mt-4">Enter your height in cm</label>
-                    <input type="text" placeholder="height in CM" class="form-control" id="txt-height">
+                    <input type="text" placeholder="Height in CM" class="form-control" id="txt-height">
+                    <button type="button" class="btn btn-dark btn-lg w-100 mt-5" onClick="calculateBMI()">
+                         Calculate BMI
+                    </button>
+            </div>
+            </form>
 
-                    <button type="button" class="btn btn-warning btn-lg w-100 mt-5" onClick="calculateBMI()">Calculate BMI</button>
-                </form>
+            <div class="col-md-6 output-screen">
+                <span>
+                                <h2 class="text-center progress-font"> Progress Report <img src="./assets/logo/progress.png" alt="progress" class="img-responsive"></h2>
+                </span>
+                <h3 class="text-center display-2" id="txt-bmi">
+
+                </h3>
+                <h3 class="text-center display-3" id="txt-remark">
+
+                </h3>
+
+
+
             </div>
-            <div class="col-md-6">
-                <h2 class="text-center display-2" id="txt-bmi"></h2>
-                <h2 class="text-center display-4" id="txt-remark"></h2>
-            </div>
+
 
         </div>
     </div>
+
 
 
 
